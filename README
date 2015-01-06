@@ -1,0 +1,9 @@
+JOBWATCH
+--------
+
+This python script will read your known_hosts file and pull out any hostnames that it can find. It will then log in to those hosts, and display top and qstat for those machines. 
+
+
+This script makes it very easy to see all of your jobs running on multiple machines over ssh.
+
+for support contact kevin.ryczko@uoit.net

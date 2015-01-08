@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os, sys, paramiko, signal, getpass
+import os, sys, paramiko, signal, getpass, platform
 
 
 
@@ -30,9 +30,10 @@ def main():
     password = getpass.getpass()
     u = user(str(username), str(password))
     
-    osname = os.name
+    os = platform.system()
+    print os
     
-    if osname == "posix":
+    if os == "Darwin":
         file = '/Users/' + username + '/.ssh/known_hosts'
     else:
         file = '/home/' + username + '/.ssh/known_hosts'
